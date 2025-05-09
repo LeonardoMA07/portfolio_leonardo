@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<script>
+  function toggleProjeto(el) {
+    el.classList.toggle('active');
+  }
+</script>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="#inicio" class="logo-link">
+        <img src="images/logo.png" alt="Logo" class="logo" />
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#sobre">Sobre Mim</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato" class="btn-contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero bg-dark" id="inicio">
+      <h2>Olá, eu me chamo Leonardo Moretti.</h2>
+      <div class="bio-container">
+        <div class="photo-wrapper">
+          <img src="images/foto1.jpg" alt="Minha Foto" class="profile-photo" />
+        </div>
+        <div class="info-wrapper">
+          <ul class="info-list">
+            <li>→ Cursando <b>Ciência da Computação</b> no <b>Insper</b> - Instituto de Ensino e Pesquisa (2025–2029);</li>
+            <li>→ <b>Python</b>, <b>CSS</b> e <b>HTML</b>;</li>
+            <li>→ Fluente em <b>inglês</b>, <b>espanhol</b> e cursando <b>francês</b>;</li>
+            <li>→ <b>Desenvolvedor</b> para o <b>Insper Code</b>;</li>
+            <li>→ <b>Medalhista</b> em olimpíadas escolares (Ouro <b>OBA</b>, Prata <b>OBF</b>, Ouro <b>Canguru</b>).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-darker" id="sobre">
+      <h2>Sobre Mim</h2>
+      <h3>França</h3>
+      <p>Nasci em <b>São Paulo - SP</b> e me mudei para <b>Bordeaux</b> aos dois anos de idade devido ao trabalho do meu pai, fui alfabetizado em <b>inglês</b> e <b>francês</b>, eu passava grande parte do meu dia na escola ou na creche enquanto minha irmã <b>Marina</b> (um ano mais velha) lutava contra a <b>leucemia</b>.
+        Foi uma época muito difícil mas graças a Deus minha irmã ficou bem e com seis anos eu <b>voltei</b> para o Brasil.
+      </p>
+      <h3>Brasil</h3>
+      <p>
+        No começo não foi fácil me <b>adaptar</b> com a volta, mas consegui me adequar à minha nova <b>realidade</b>. Sempre gostei bastante de jogar <b>videogames</b> e isso me fez ficar próximo da internet e fomentou meu interesse pela <b>programação</b>. Por conseguinte, ao decorrer da minha carreira escolar
+        eu sempre consegui me destacar bastante na área de <b>exatas</b>, ganhando várias <b>medalhas</b>, e isso moldou meu interesse e fez com que eu escolhesse o curso de <b>Ciência da Computação</b>.
+      </p>
+      <h3>Faculdade</h3>
+      <p>
+        Atualmente eu estou iniciando meu curso no <b>Insper</b>, no qual eu consegui passar em <b>quarto lugar</b> e estou amando. Além dos estudos meus <b>hobbies</b> favoritos são jogar <b>videogames</b> e praticar <b>artes marciais</b>, eu já havia feito <b>Judô</b> e <b>Capoeira</b> quando era menor mas foi no final do terceiro ano do ensino médio que eu realmente comecei a me dedicar,
+      praticando <b>Boxe</b> e <b>Jiu-Jitsu</b>, e agora com a mudança mudei para o <b>Muay Thai</b> e <b>Jiu-Jitsu</b>.
+      </p>
+      <img src="images/foto2.jpeg" alt="Imagem Sobre Mim" class="sobre-imagem" />
+    </section>
+
+    <section class="section bg-dark" id="projetos">
+      <h2>Projetos</h2>
+
+      <div class="projetos-grid">
+        <div class="projeto-card" onclick="toggleProjeto(this)">
+          <h3>Projeto 1</h3>
+          <div class="projeto-detalhes">
+            <img src="images/projeto1.jpg" alt="Imagem do Projeto 1" />
+            <p>Este é um projeto de exemplo que desenvolvi usando HTML, CSS e JavaScript.</p>
+            <a href="https://seu-projeto-link.com" target="_blank">Ver Projeto</a>
+          </div>
+        </div>
+
+        <div class="projeto-card" onclick="toggleProjeto(this)">
+          <h3>Projeto 2</h3>
+          <div class="projeto-detalhes">
+            <img src="images/projeto2.jpg" alt="Imagem do Projeto 2" />
+            <p>Outro projeto interessante com foco em responsividade e performance.</p>
+            <a href="https://outro-projeto.com" target="_blank">Ver Projeto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-darker" id="contato">
+      <h2>Contato</h2>
+      <p>Espero que eu tenha despertado interesse em você ou que eu possa ao menos ter te inspirado!</p>
+      <p>Caso queira falar comigo ou se deseja dar uma olhada nas minhas redes sociais, você pode me encontrar aqui:</p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/leonardo-moretti-alva-593652352/" target="_blank">
+          <img src="images/linkedin.png" alt="LinkedIn" class="social-icon" />
+        </a>
+        <a href="https://github.com/LeonardoMA07" target="_blank">
+          <img src="images/github.png" alt="GitHub" class="social-icon" />
+        </a>
+        <a href="mailto:leonardomorettialva@gmail.com">
+          <img src="images/email.png" alt="Email" class="social-icon" />
+        </a>
+      </div>
+    </section>
+</body>
+</html>
