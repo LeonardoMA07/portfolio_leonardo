@@ -270,6 +270,9 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
+  .profile-photo {
+  margin-top: 25px;
+}
 
   .nav-toggle {
     display: block;
