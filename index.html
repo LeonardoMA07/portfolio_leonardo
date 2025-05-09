@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Meu Portfólio</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -11,15 +11,18 @@
     el.classList.toggle('active');
   }
 </script>
-<body>
 
+<body>
   <header class="header">
     <div class="container">
       <a href="#inicio" class="logo-link">
         <img src="images/logo.png" alt="Logo" class="logo" />
       </a>
-      <nav class="nav">
-        <ul class="nav-list">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
+      <nav class="nav" id="nav">
+        <ul class="nav-list" id="nav-list">
           <li><a href="#sobre">Sobre Mim</a></li>
           <li><a href="#projetos">Projetos</a></li>
           <li><a href="#contato" class="btn-contato">Contato</a></li>
@@ -71,20 +74,19 @@
 
       <div class="projetos-grid">
         <div class="projeto-card" onclick="toggleProjeto(this)">
-          <h3>Projeto 1</h3>
+          <h3>GAS Informar</h3>
           <div class="projeto-detalhes">
-            <img src="images/projeto1.jpg" alt="Imagem do Projeto 1" />
-            <p>Este é um projeto de exemplo que desenvolvi usando HTML, CSS e JavaScript.</p>
-            <a href="https://seu-projeto-link.com" target="_blank">Ver Projeto</a>
+            <img src="images/projetos/GasInformar.png" alt="Imagem do Projeto 2" />
+            <p>Esse projeto foi realizado em equipe e consiste em um site criado em menos de duas semanas para ser utilizado por estudantes do GAS Informar, que é um projeto que ensina informática para pessoas de baixa renda.</p>
+            <a href="https://front-grupo-3-6gxf.vercel.app/" target="_blank">Ver Projeto</a>
           </div>
         </div>
-
         <div class="projeto-card" onclick="toggleProjeto(this)">
-          <h3>Projeto 2</h3>
+          <h3>Paradise Hotel</h3>
           <div class="projeto-detalhes">
-            <img src="images/projeto2.jpg" alt="Imagem do Projeto 2" />
-            <p>Outro projeto interessante com foco em responsividade e performance.</p>
-            <a href="https://outro-projeto.com" target="_blank">Ver Projeto</a>
+            <img src="images/projetos/pygame.png" alt="Imagem do Projeto 1" />
+            <p>Esse projeto em dupla foi desenevolvido utilizando a biblioteca Pygame em Python, onde nós criamos um jogo top-down shooter que teve um resultado incrível!</p>
+            <a href="https://github.com/insper-classroom/projeto-pygame-jogo-branco-leonardo-e-victor" target="_blank">Ver Projeto</a>
           </div>
         </div>
       </div>
@@ -107,5 +109,6 @@
         </a>
       </div>
     </section>
+    <script src="js/script.js"></script>
 </body>
 </html>
