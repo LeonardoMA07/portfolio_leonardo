@@ -46,7 +46,7 @@
 
       "about.title": "Sobre",
       "about.text":
-        "Estudo Ciência da Computação no Insper (2025–2029), onde fui aprovado em 4º lugar, e faço parte da Insper AI. Morei na França na infância e hoje falo inglês fluente e espanhol intermediário. Fui medalhista em olimpíadas científicas: ouro na OBA, prata na OBF e ouro no Canguru de Matemática. Fora do código, treino Boxe e Jiu-Jitsu.",
+        "Estudo Ciência da Computação no Insper (2025–2029) e faço parte da Insper AI. Morei na França na infância e hoje falo inglês fluente e espanhol intermediário. Fui medalhista em olimpíadas científicas: ouro na OBA, prata na OBF e ouro no Canguru de Matemática. Fora do código, treino Boxe e Jiu-Jitsu e gosto de escalar.",
       "about.skillsTitle": "Habilidades",
 
       "contact.title": "Contato",
@@ -83,7 +83,7 @@
 
       "about.title": "About",
       "about.text":
-        "I'm studying Computer Science at Insper (2025–2029), where I was admitted in 4th place, and I'm part of Insper AI. I lived in France as a child and today I speak fluent English and intermediate Spanish. I've won medals in science olympiads: gold in the Brazilian Astronomy Olympiad, silver in the Brazilian Physics Olympiad and gold in the Math Kangaroo. Away from code, I train boxing and jiu-jitsu.",
+        "I'm studying Computer Science at Insper (2025–2029) and I'm part of Insper AI. I lived in France as a child and today I speak fluent English and intermediate Spanish. I've won medals in science olympiads: gold in the Brazilian Astronomy Olympiad, silver in the Brazilian Physics Olympiad and gold in the Math Kangaroo. Away from code, I train boxing and jiu-jitsu, and I climb.",
       "about.skillsTitle": "Skills",
 
       "contact.title": "Contact",
