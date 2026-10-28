@@ -36,7 +36,7 @@
         "Ciência da Computação @ Insper · Desenvolvimento de software e Inteligência Artificial",
       "hero.tagline":
         "Membro da Insper AI. Buscando estágio em desenvolvimento de IA.",
-      "hero.email": "E-mail",
+      "hero.contact": "Fale comigo",
       "hero.resume": "Baixar currículo",
 
       "projects.title": "Projetos",
@@ -73,7 +73,7 @@
         "Computer Science @ Insper · Software development and Artificial Intelligence",
       "hero.tagline":
         "Member of Insper AI. Looking for an internship in AI development.",
-      "hero.email": "Email",
+      "hero.contact": "Get in touch",
       "hero.resume": "Download résumé",
 
       "projects.title": "Projects",

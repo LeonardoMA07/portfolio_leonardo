@@ -286,8 +286,7 @@ h4 {
   transform: translateY(-1px);
 }
 
-/* Nao usado hoje: os botoes do hero sao todos iguais, de proposito.
-   Disponivel caso um dia valha destacar uma unica acao. */
+/* Uma acao em destaque por tela. Hoje: "Fale comigo" no hero. */
 .btn--primary {
   background: var(--accent-soft);
   border-color: var(--accent);
@@ -297,6 +296,34 @@ h4 {
 .btn--primary:hover {
   background: rgba(122, 162, 247, 0.2);
   color: var(--accent-strong);
+}
+
+/* Links de rede do hero: presentes, mas sem competir com o botao principal. */
+.hero__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.hero__social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s var(--ease);
+}
+
+.hero__social a:hover {
+  color: var(--text);
+}
+
+.hero__social-icon {
+  flex: none;
 }
 
 .btn--small {
