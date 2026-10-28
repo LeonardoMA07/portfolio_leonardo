@@ -1,0 +1,619 @@
+/* =========================================================
+   Leonardo Moretti — portfolio
+   Tema escuro, uma cor de destaque, mobile first.
+   ========================================================= */
+
+:root {
+  /* Superficies: nunca cinza-escuro sobre preto — ha degrau real entre elas */
+  --bg: #0e1116;
+  --surface: #171c24;
+  --surface-hover: #1d232d;
+  --border: #2a3240;
+  --border-strong: #3a4454;
+
+  /* Texto (contraste AA ou melhor sobre --bg) */
+  --text: #e8ecf3;
+  --text-muted: #a3adbd;
+
+  /* Unica cor de destaque */
+  --accent: #7aa2f7;
+  --accent-strong: #a6c1ff;
+  --accent-soft: rgba(122, 162, 247, 0.12);
+
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", var(--font-sans);
+
+  --measure: 68ch; /* ~70 caracteres de largura de leitura */
+  --container: 68rem;
+  --header-h: 4rem;
+  --radius: 12px;
+  --radius-sm: 8px;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-x: hidden; /* trava qualquer scroll horizontal residual */
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--accent-strong);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* Foco visivel e consistente em todo elemento navegavel por teclado */
+:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.section {
+  padding-block: 4rem;
+  border-top: 1px solid var(--border);
+}
+
+.section__title {
+  font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.subsection__title {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose {
+  max-width: var(--measure);
+  color: var(--text-muted);
+  margin: 0;
+  text-align: left;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.15s var(--ease);
+}
+
+.skip-link:focus-visible {
+  top: 0.75rem;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  min-height: var(--header-h);
+  background-color: rgba(14, 17, 22, 0.88);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.site-header__inner {
+  min-height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.brand:hover {
+  color: var(--accent-strong);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav__list a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.15s var(--ease);
+}
+
+.nav__list a:hover {
+  color: var(--text);
+}
+
+.lang-toggle {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  transition: background-color 0.15s var(--ease), border-color 0.15s var(--ease);
+}
+
+.lang-toggle:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-top: calc(var(--header-h) + 3.5rem);
+  padding-bottom: 3.5rem;
+}
+
+.hero__title {
+  font-size: clamp(2.25rem, 1.6rem + 3.4vw, 3.75rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  max-width: var(--measure);
+  font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  color: var(--text);
+  margin: 0 0 0.75rem;
+}
+
+.hero__line {
+  max-width: var(--measure);
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ---------- Botoes ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem; /* alvo de toque confortavel */
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s var(--ease), border-color 0.15s var(--ease),
+    transform 0.15s var(--ease), color 0.15s var(--ease);
+}
+
+.btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+/* Nao usado hoje: os botoes do hero sao todos iguais, de proposito.
+   Disponivel caso um dia valha destacar uma unica acao. */
+.btn--primary {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
+.btn--primary:hover {
+  background: rgba(122, 162, 247, 0.2);
+  color: var(--accent-strong);
+}
+
+.btn--small {
+  min-height: 2.375rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.875rem;
+}
+
+/* ---------- Projetos ---------- */
+
+/* Um projeto: card de destaque. Dois ou mais: o JS troca a classe e vira grid. */
+.projects {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.projects--grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 23rem), 1fr));
+}
+
+/* No grid os cards esticam ate a altura da linha: a imagem mantem a proporcao
+   e e o conteudo que cresce, com os botoes encostados na base do card. */
+.projects--grid .project-card {
+  grid-template-rows: auto 1fr;
+}
+
+.project-card {
+  display: grid;
+  gap: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease),
+    background-color 0.2s var(--ease);
+}
+
+.project-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.project-card__media {
+  margin: 0;
+  background: #11161d;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-card__media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 1.25rem 1.5rem;
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.project-card__text {
+  max-width: var(--measure);
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+/* Destaque: no desktop vira horizontal — imagem a esquerda, conteudo a direita */
+@media (min-width: 56rem) {
+  .projects--featured .project-card {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .projects--featured .project-card__media {
+    height: 100%;
+    border-bottom: 0;
+    border-right: 1px solid var(--border);
+  }
+
+  .projects--featured .project-card__media img {
+    height: 100%;
+    aspect-ratio: auto;
+    min-height: 19rem;
+  }
+
+  .projects--featured .project-card__body {
+    padding: 2rem;
+  }
+
+  .projects--featured .project-card__title {
+    font-size: 1.5rem;
+  }
+
+  .projects--featured .project-card__text {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Chips e habilidades ---------- */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  white-space: nowrap;
+}
+
+.project-card__tags .chip {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border-color: rgba(122, 162, 247, 0.35);
+}
+
+.skills {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skills__label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.6rem;
+}
+
+@media (min-width: 40rem) {
+  .skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem 2.5rem;
+  }
+}
+
+/* ---------- Contato ---------- */
+
+.contact__email {
+  margin: 1.5rem 0 1.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1rem + 0.6vw, 1.375rem);
+  overflow-wrap: anywhere;
+}
+
+.contact__email a {
+  text-decoration-color: rgba(122, 162, 247, 0.4);
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.social__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.15s var(--ease), background-color 0.15s var(--ease),
+    transform 0.15s var(--ease);
+}
+
+.social__link:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.social__icon {
+  flex: none;
+  color: var(--text-muted);
+}
+
+.social__link:hover .social__icon {
+  color: var(--accent-strong);
+}
+
+/* ---------- Rodape ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding-block: 2rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ---------- Animacao de entrada (sutil) ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Se o JS nao rodar, nada fica invisivel */
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Telas estreitas ---------- */
+
+@media (max-width: 34rem) {
+  .brand {
+    font-size: 0.9375rem;
+  }
+
+  .nav,
+  .nav__list {
+    gap: 0.75rem;
+  }
+
+  .nav__list a {
+    font-size: 0.8125rem;
+  }
+
+  .lang-toggle {
+    padding: 0.35rem 0.55rem;
+  }
+
+  .hero__actions .btn {
+    flex: 1 1 10rem;
+  }
+}
+
+/* Abaixo de ~480px o header nao cabe numa linha so: vira duas linhas,
+   nome em cima e navegacao embaixo. Sem isso a pagina ganha scroll lateral. */
+@media (max-width: 30rem) {
+  :root {
+    --header-h: 5.25rem;
+  }
+
+  .site-header__inner {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.3rem;
+    padding-block: 0.55rem;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .nav__list {
+    gap: 1rem;
+  }
+}

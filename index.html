@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leonardo Moretti — Desenvolvimento de software e IA</title>
+  <meta name="description" data-i18n="meta.description" content="Portfólio de Leonardo Moretti, estudante de Ciência da Computação no Insper, focado em desenvolvimento de software e Inteligência Artificial." />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0e1116" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top">Leonardo Moretti</a>
+
+      <nav class="nav" aria-label="Navegação principal" data-i18n-aria-label="a11y.nav">
+        <ul class="nav__list">
+          <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+          <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+        </ul>
+        <button
+          id="lang-toggle"
+          class="lang-toggle"
+          type="button"
+          aria-label="Switch to English"
+          data-i18n-aria-label="a11y.langToggle"
+        >
+          <span aria-hidden="true" id="lang-toggle-label">EN</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container">
+        <h1 class="hero__title">Leonardo Moretti</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">
+          Ciência da Computação @ Insper · Desenvolvimento de software e Inteligência Artificial
+        </p>
+        <p class="hero__line" data-i18n="hero.tagline">
+          Membro da Insper AI. Buscando estágio em desenvolvimento de IA.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn" href="https://github.com/LeonardoMA07" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/leonardo-moretti-alva" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn" href="mailto:leonardomorettialva@gmail.com" data-i18n="hero.email">E-mail</a>
+          <a class="btn" href="curriculo.pdf" download data-i18n="hero.resume">Baixar currículo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projetos">
+      <div class="container">
+        <h2 class="section__title reveal" data-i18n="projects.title">Projetos</h2>
+        <!-- Os cards são montados por script.js a partir do array `projects`. -->
+        <div id="projects-list" class="projects projects--featured"></div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2 class="section__title reveal" data-i18n="about.title">Sobre</h2>
+        <p class="prose reveal" data-i18n="about.text">
+          Estudo Ciência da Computação no Insper (2025–2029), e faço parte da Insper AI. Morei na França na infância e hoje falo inglês fluente e espanhol intermediário. Fui medalhista em olimpíadas científicas: ouro na OBA, prata na OBF e ouro no Canguru de Matemática. Fora do código, treino Boxe e Jiu-Jitsu e gosto de escalar.
+        </p>
+
+        <h3 class="subsection__title reveal" data-i18n="about.skillsTitle">Habilidades</h3>
+        <ul class="skills reveal">
+          <li class="skills__group">
+            <h4 class="skills__label">IA/ML</h4>
+            <ul class="chips">
+              <li class="chip">LLMs</li>
+              <li class="chip">RAG</li>
+              <li class="chip">scikit-learn</li>
+              <li class="chip">pandas</li>
+            </ul>
+          </li>
+          <li class="skills__group">
+            <h4 class="skills__label">Backend</h4>
+            <ul class="chips">
+              <li class="chip">Python</li>
+              <li class="chip">FastAPI</li>
+              <li class="chip">Django</li>
+              <li class="chip">Java</li>
+              <li class="chip">Spring Boot</li>
+              <li class="chip">PostgreSQL</li>
+            </ul>
+          </li>
+          <li class="skills__group">
+            <h4 class="skills__label">Frontend</h4>
+            <ul class="chips">
+              <li class="chip">React</li>
+              <li class="chip">HTML</li>
+              <li class="chip">CSS</li>
+              <li class="chip">JavaScript</li>
+            </ul>
+          </li>
+          <li class="skills__group">
+            <h4 class="skills__label">Infra</h4>
+            <ul class="chips">
+              <li class="chip">AWS</li>
+              <li class="chip">Supabase</li>
+              <li class="chip">Render</li>
+              <li class="chip">Docker</li>
+              <li class="chip">Vercel</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container">
+        <h2 class="section__title reveal" data-i18n="contact.title">Contato</h2>
+        <p class="prose reveal" data-i18n="contact.text">
+          Estou aberto a conversas sobre estágio, projetos de IA ou qualquer ideia interessante. Me escreva.
+        </p>
+
+        <p class="contact__email reveal">
+          <a href="mailto:leonardomorettialva@gmail.com">leonardomorettialva@gmail.com</a>
+        </p>
+
+        <ul class="social reveal">
+          <li>
+            <a class="social__link" href="https://github.com/LeonardoMA07" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg class="social__icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M12 .5C5.73.5.9 5.33.9 11.6c0 4.9 3.17 9.06 7.57 10.53.55.1.75-.24.75-.53v-1.9c-3.08.67-3.73-1.3-3.73-1.3-.5-1.29-1.23-1.63-1.23-1.63-1-.69.08-.67.08-.67 1.11.08 1.7 1.14 1.7 1.14.98 1.69 2.57 1.2 3.2.92.1-.72.38-1.2.7-1.48-2.46-.28-5.05-1.23-5.05-5.5 0-1.21.44-2.2 1.14-2.98-.11-.28-.49-1.41.11-2.94 0 0 .93-.3 3.04 1.14a10.5 10.5 0 0 1 5.54 0c2.1-1.44 3.03-1.14 3.03-1.14.6 1.53.22 2.66.11 2.94.71.78 1.14 1.77 1.14 2.98 0 4.28-2.6 5.22-5.07 5.49.4.35.75 1.03.75 2.08v3.08c0 .3.2.64.76.53 4.4-1.47 7.56-5.63 7.56-10.53C23.1 5.33 18.27.5 12 .5Z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a class="social__link" href="https://www.linkedin.com/in/leonardo-moretti-alva" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg class="social__icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M6.94 5.5a2.44 2.44 0 1 1-4.88 0 2.44 2.44 0 0 1 4.88 0ZM2.4 8.9h4.2V21.5H2.4V8.9Zm7.2 0h4.03v1.72h.06c.56-1.02 1.93-2.1 3.98-2.1 4.25 0 5.03 2.63 5.03 6.05V21.5h-4.2v-5.9c0-1.41-.03-3.22-2-3.22-2 0-2.3 1.53-2.3 3.11v6.01H9.6V8.9Z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Leonardo Moretti</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
